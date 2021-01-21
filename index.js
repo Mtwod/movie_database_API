@@ -1,12 +1,3 @@
-function disableScroll() {
-  document.body.style.overflow = 'hidden';
-  document.querySelector('html').scrollTop = window.scrollY;
-  }
-  
-function enableScroll() {
-document.body.style.overflow = null;
-}
-
 const searchButton = document.getElementById('searchButton');
 
 const onSearchClick = async() => {
@@ -20,7 +11,4 @@ const onSearchClick = async() => {
   }
 };
 
-
 searchButton.addEventListener('click', onSearchClick);
-
-document.body.addEventListener()

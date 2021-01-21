@@ -4,6 +4,10 @@ const displaySearchResult = (movies) => {
   movies.forEach(movie => {
     showMovieCard(displayDiv, movie.title, movie.year, movie.image, movie.index);
   });
+/********************
+ * Observer Test !
+ *******************/
+  createAllObservers(movies.length);
 };
 
 /*******************

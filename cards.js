@@ -3,7 +3,7 @@
 const showMovieCard = (selector, title, year, image, index) => {
 
   selector.innerHTML += `
-  <div class="card my-2 movie-card">
+  <div id="movieCard-${index}" class="card my-2 movie-card">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="${image}" class="card-img movie-img" alt="movie poster">

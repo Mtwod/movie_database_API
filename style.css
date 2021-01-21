@@ -1,6 +1,20 @@
 .movie-card {
   width: 80%;
   height: 300px;
+  margin-left: -250px;
+  opacity: 0;
+  animation-duration: 0.8s;
+}
+
+@keyframes movie-card-appear {
+  from { 
+    margin-left: -250px;
+    opacity: 0 
+  }
+  to { 
+    margin-left: 120px;
+    opacity: 1 
+  }
 }
 
 .movie-img {
@@ -58,3 +72,5 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+
