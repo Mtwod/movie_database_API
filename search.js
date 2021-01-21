@@ -2,7 +2,7 @@ const searchMovie = async () => {
   try {
     const searchInput = document.getElementById('searchInput').value;
     const input = searchInput.replace(' ', '+');
-    const response = await fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${input}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${input}`);
     const data = await response.json();
     let result = [];
     const dataSearchArray = data.Search;
