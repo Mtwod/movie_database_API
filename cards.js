@@ -1,6 +1,6 @@
 // SEARCH CARD
 
-const showMovieCard = (selector, title, year, image) => {
+const showMovieCard = (selector, title, year, image, index) => {
 
   selector.innerHTML += `
   <div class="card my-2 movie-card">
@@ -12,7 +12,7 @@ const showMovieCard = (selector, title, year, image) => {
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
           <p class="card-text"><small class="text-muted">${year}</small></p>
-          <a href="#" class="btn btn-primary">Read more</a>
+          <button id="readMore-${index}" class="btn btn-primary">Read more</button>
         </div>
       </div>
     </div>
@@ -21,21 +21,33 @@ const showMovieCard = (selector, title, year, image) => {
 
 // READ MORE CARD 
 
-const showMovieCardInfo = (selector, title, description, year, image) => {
+const showMovieInfoCard = (title, description, date, image) => {
 
-  selector.innerHTML += `
-  <div class="card my-2 movie-card">
-    <div class="row no-gutters">
+  const movieInfoCardHtml = `
+  <div id="readMoreModal" class="card my-2 readMoreModal">
+    <div class="row no-gutters readMoreModal-content">
       <div class="col-md-4">
         <img src="${image}" class="card-img movie-img" alt="movie poster">
       </div>
       <div class="col-md-8">
         <div class="card-body">
+          <button id="closeMovieInfoCard" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${description}</p>
-          <a class="card-text"><small class="text-muted">${year}</small></a>
+          <a class="card-text"><small class="text-muted">${date}</small></a>
         </div>
       </div>
     </div>
   </div>`;
+
+  document.body.insertAdjacentHTML('beforeend', movieInfoCardHtml);
+
+  // Add close button event
+  const movieInfoCardCloseButton = document.getElementById('closeMovieInfoCard');
+  movieInfoCardCloseButton.addEventListener('click', () => {
+    const movieInfoCard = document.getElementById('readMoreModal');
+    movieInfoCard.remove();
+  })
 };
