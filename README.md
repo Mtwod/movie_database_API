@@ -1,0 +1,7 @@
+# THE GREAT MOVIE DATABASE
+
+### SPECIFICATIONS
+
+### HOW TO USE
+
+### Authors
