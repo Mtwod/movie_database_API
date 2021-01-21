@@ -1,7 +1,9 @@
 # THE GREAT MOVIE DATABASE
 
-### SPECIFICATIONS
+### Specifications
 
-### HOW TO USE
+### How to use
 
-### Authors
+### Author(s)
+
+@Mtwod & @colinebrlt
